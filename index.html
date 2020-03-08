@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+  </head>
+  <body class="light-blue lighten-5">
+    <nav class="z-depth-0 grey lighten-3">
+      <div class="nav-wrapper container">
+        <a href="#" class="brand-logo grey-text">CSE 135 HW4</a>
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+          <li class="logged-in">
+            <a href="#" class="grey-text modal-trigger" data-target="modal-account">Account</a>
+          </li>
+          <li class="logged-in">
+            <a href="#" class="grey-text" id="logout">Logout</a>
+          </li>
+          <li class="logged-in">
+            <a href="#" class="grey-text modal-trigger" data-target="modal-login">Login</a>
+          </li>
+          <li class="logged-out">
+            <a href="#" class="grey-text modal-trigger" data-target="modal-signup">Sign up</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Sign Up Modal-->
+    <div id="modal-signup" class="modal">
+      <div class="modal-content">
+        <h4>Sign up</h4><br>
+        <form id="signup-form">
+          <div class="input-field">
+            <input type="email" autocomplete="username" id="signup-email" required >
+            <label for="signup-email">Email Address</label>
+          </div>
+          <div class="input-field">
+            <input type="password" autocomplete='new-password' id="signup-password" required >
+            <label for="signup-password">Password</label>
+          </div>
+          <button class="btn yellow darken-3 z-depth-0">Sign up</button>
+        </form>
+      </div>
+    </div>
+
+    <!-- Login Modal-->
+    <div id="modal-login" class="modal">
+      <div class="modal-content">
+        <h4>Login</h4><br>
+        <form id="login-form">
+          <div class="input-field">
+            <input type="email" autocomplete="username" id="login-email" required>
+            <label for="login-email">Email Address</label>
+          </div>
+          <div class="input-field">
+            <input type="password" autocomplete="current-password" id="login-password" required >
+            <label for="login-password">Password</label>
+          </div>
+          <button class="btn yellow dark-3 z-depth-0">Login</button>
+        </form>
+      </div>
+    </div>
+
+    <!-- Firebase imports -->
+    <script src="https://www.gstatic.com/firebasejs/7.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.10.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.10.0/firebase-firestore.js"></script>
+    <script>
+      const firebaseConfig = {
+        apiKey: "AIzaSyDrkYkpnQze3xr-dTUyTd_bxSHhjPtiuoQ",
+        authDomain: "cse135-hw4-4a3ad.firebaseapp.com",
+        databaseURL: "https://cse135-hw4-4a3ad.firebaseio.com",
+        projectId: "cse135-hw4-4a3ad",
+        storageBucket: "cse135-hw4-4a3ad.appspot.com",
+        messagingSenderId: "378665191208",
+        appId: "1:378665191208:web:13715cb73f3a9113f1f21d",
+        measurementId: "G-LW04DJKEMX"
+      };
+      firebase.initializeApp(firebaseConfig);
+      const auth = firebase.auth();
+      const db = firebase.firestore();
+
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="scripts/auth.js"></script>
+    <script src="scripts/index.js"></script>
+  </body>
+</html>
