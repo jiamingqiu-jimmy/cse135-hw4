@@ -57,7 +57,7 @@ auth.onAuthStateChanged(user => {
 
 ### Diagram for POC
 
-See hw4-diagram.pdf for diagram
+See cse135hw4diagrams.pdf page 1 for diagram
 
 ## Grid Library
 ### Handsontable - Grid Library
@@ -72,5 +72,5 @@ What attracted me to Chart.js is the cool animations and colorful visuals that t
 
 ## Diagrams and Wireframe for final project
 
-See final-app-diagram.pdf and final-wireframe.pdf
+See cse135hw4diagrams.pdf page 2 and 3
 
