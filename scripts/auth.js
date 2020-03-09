@@ -1,5 +1,25 @@
+db.collection('graph_data').get().then(snapshot => {
+console.log(snapshot.docs);
+})
+
+
 //Listen for authenication state changes
 auth.onAuthStateChanged(user => {
+    setup_UI(user);
+    if (user) {
+        create_grid("Created Grid");
+        create_chart("Created Chart");
+
+        //user logged in
+        //Future Implementation TODO
+
+        //Get DB Data
+        
+        //Create_grid/chart with real data;
+
+    } else {
+        //user logged out
+    }
     console.log(user);
 })
 
