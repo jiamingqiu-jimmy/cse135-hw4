@@ -1,6 +1,9 @@
 # CSE 135 - HW4 README
 
-README answering questions with diagrams etc..
+Hosted URL:
+https://cse135-hw4-4a3ad.firebaseapp.com/
+Test Login: test5@gmail.com
+Test Password: 123456
 
 ## Brief overview of Authenication
 ### Firebase Authenication - Email and Password
